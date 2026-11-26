@@ -31,8 +31,12 @@
   tr.total td { font-weight:800; border-bottom:none; }
   a { color:#ff8a97; }
   ul.check { list-style:none; padding:0; }
-  ul.check li { padding:5px 0 5px 28px; position:relative; }
-  ul.check li::before { content:""; position:absolute; left:2px; top:9px; width:14px; height:14px; border:2px solid var(--muted); border-radius:3px; }
+  ul.check li { padding:4px 0; }
+  ul.check label { display:flex; gap:12px; align-items:flex-start; cursor:pointer; padding:6px 4px; border-radius:6px; }
+  ul.check label:hover { background:#1f1216; }
+  ul.check input { width:22px; height:22px; margin:1px 0 0; accent-color:var(--red); flex:none; cursor:pointer; }
+  ul.check label:has(input:checked) { color:var(--muted); text-decoration:line-through; }
+  #reset { background:none; border:1px solid var(--line); color:var(--muted); border-radius:6px; padding:4px 10px; font:inherit; font-size:13px; cursor:pointer; }
   .warn { border-left:3px solid var(--red); padding:8px 12px; background:#21080d; border-radius:0 8px 8px 0; margin:10px 0; }
   footer { margin-top:40px; color:var(--muted); font-size:13px; }
   footer li { margin:3px 0; word-break:break-word; }
@@ -50,7 +54,7 @@
 <h2>Рішення коротко</h2>
 <div class="card">
   <p style="margin-top:0">Знімаємо на <b>3 камери + телефон</b>, звук пишемо з <b>4 петличок</b>, ставимо <b>2 лампи</b> з софтбоксами. Формат <b>4K або 1080p, 25 к/с</b>.</p>
-  <p style="margin-bottom:0">Свою техніку беремо всю. <b>Орендуємо на 1 день лише 3 речі</b>: другу Sony A7 IV, ще один комплект DJI Mic і світло. Це приблизно <b>£105–130</b> у приватних власників або <b>£190–220</b> у прокатних конторах.</p>
+  <p style="margin-bottom:0">Своє: <b>Sony A7 IV з кітом</b> і <b>DJI Mic (2 петлички)</b>. На 1 день <b>орендуємо</b>: ще 2 камери, ще 2 петлички, 2 лампи й 3 штативи. Це приблизно <b>£130–200</b> у приватних власників або <b>£250–280</b> у прокатних конторах.</p>
 </div>
 
 <h2>Камери і ракурси</h2>
@@ -61,14 +65,15 @@
 <div class="card">
   <h3><span class="tag rent">оренда</span>B — крупно гості: друга Sony A7 IV з кітом</h3>
   Модель та сама, тож збігаються кольори, меню й батареї, і в монтажі нічого не доводиться підганяти. Приймач другого DJI Mic підключи сюди.
-  <div class="muted">Hygglo: від £38/день, з об'єктивом 28–135 £49/день · Wex Rental: £70/день без ПДВ. Якщо A7 IV немає, бери Sony FX30 (Wedio £45/день).</div>
+  <div class="muted">Hygglo: від £38/день, з об'єктивом 28–135 £49/день · Wex Rental: £70/день без ПДВ.</div>
 </div>
 <div class="card">
-  <h3><span class="tag have">є</span>C — крупно ведучий: Canon 2000D</h3>
-  Пише 1080p 25 к/с і зупиняється через 29:59, обійти це не можна. Тому постав таймер на 25 хв і перезапускай запис у паузі між питаннями. Ця камера підходить лише як перебивка, на загальний план її не став.
+  <h3><span class="tag rent">оренда</span>C — крупно ведучий: Sony FX30 (або ще одна A7 IV)</h3>
+  Теж Sony, тож кольори легко підігнати. Пише без обмеження за часом і не перегрівається. Підійде будь-який об'єктив від 24 до 70 мм.
+  <div class="muted">Hygglo: FX30 від ~£10–15/день (Brentford) до ~£37–40/день (Ealing) · Wedio: £45/день · Cardinal Broadcast: £55/день.</div>
 </div>
 <div class="card">
-  <h3><span class="tag have">є</span>Телефон вертикально</h3>
+  <h3><span class="tag have">свій телефон</span>Вертикально, за бажанням</h3>
   На штативі збоку, для сирих кліпів у TikTok, Reels і Shorts.
 </div>
 
@@ -94,23 +99,24 @@
   <span class="tag buy">купити</span> диск для бекапу. Samsung T7 на 1 ТБ коштує £170–229, бо пам'ять зараз подорожчала. Підійде і звичайний зовнішній HDD.<br>
   <span class="tag buy">купити</span> 2 подовжувачі, gaffer-скотч, липучки для кабелів (~£20)<br>
   <span class="tag buy">купити</span> дротові навушники для контролю звуку, якщо їх ще немає<br>
-  <span class="tag buy">купити або позичити</span> 3 штативи, якщо їх немає (Hygglo ~£15/день)
+  <span class="tag rent">оренда</span> 3 штативи (Hygglo ~£15/день) або купити найпростіші
 </div>
 
 <h2>Кошторис на 1 день</h2>
 <table>
   <tr><th>Що</th><th class="num">Приватні</th><th class="num">Контори</th></tr>
-  <tr><td>Друга A7 IV з кітом</td><td class="num">£38–49</td><td class="num">£84*</td></tr>
+  <tr><td>Друга A7 IV з кітом (камера B)</td><td class="num">£38–49</td><td class="num">£84*</td></tr>
+  <tr><td>Sony FX30 з об'єктивом (камера C)</td><td class="num">£10–40</td><td class="num">£55</td></tr>
   <tr><td>DJI Mic 2 (2 передавачі)</td><td class="num">£25</td><td class="num">£34*</td></tr>
   <tr><td>2 лампи з софтбоксами</td><td class="num">£40</td><td class="num">£70</td></tr>
-  <tr><td>Штативи, якщо своїх немає</td><td class="num">£0–15</td><td class="num">£0–30</td></tr>
-  <tr class="total"><td>Разом</td><td class="num">≈ £105–130</td><td class="num">≈ £190–220</td></tr>
+  <tr><td>3 штативи</td><td class="num">£15–45</td><td class="num">£30–45</td></tr>
+  <tr class="total"><td>Разом</td><td class="num">≈ £130–200</td><td class="num">≈ £250–280</td></tr>
 </table>
-<p class="muted">* з ПДВ 20%. Окремо разово: карти й диск для бекапу, ≈ £80–300.</p>
+<p class="muted">* з ПДВ 20%. Окремо разово: карти, диск для бекапу й навушники, ≈ £80–300. Перевір, щоб в орендованих камерах були батареї й карта.</p>
 
 <h2>Налаштування (однакові на всіх камерах)</h2>
 <div class="card">
-  25 к/с · витримка 1/50 · баланс білого вручну (не авто), однаковий на всіх · ISO як можна нижче, світло давай лампами · фокус на обличчя · 4K на A7 IV, 1080p на Canon.
+  25 к/с · витримка 1/50 · баланс білого вручну (не авто), однаковий на всіх · ISO як можна нижче, світло давай лампами · фокус на обличчя · 4K або 1080p, але однаково на всіх трьох.
 </div>
 
 <h2>Як орендувати, щоб не погоріти</h2>
@@ -125,24 +131,24 @@
 
 <h2>Чекліст дня зйомки</h2>
 <ul class="check">
-  <li>Усі батареї заряджені, павербанк, подовжувачі</li>
-  <li>Карти пам'яті порожні, по одній на камеру + запасна</li>
-  <li>4 петлички чіпляємо на рівні грудей, внутрішній запис увімкнено</li>
-  <li>Бар вимикає музику, по можливості кондиціонер і холодильники</li>
-  <li>10 с запису тиші в залі</li>
-  <li>Кадр і фокус на кожній камері, баланс білого однаковий</li>
-  <li>Усі камери на запис, плеснути в долоні для синхрону</li>
-  <li>Canon 2000D: перезапускати кожні 25 хв</li>
-  <li>Пауза посередині: перевірити батареї й карти</li>
-  <li>Того ж вечора скопіювати файли у 2 місця</li>
+  <li><label><input type="checkbox" data-k="c0"> Усі батареї заряджені, павербанк, подовжувачі</label></li>
+  <li><label><input type="checkbox" data-k="c1"> Карти пам'яті порожні, по одній на камеру + запасна</label></li>
+  <li><label><input type="checkbox" data-k="c2"> 4 петлички чіпляємо на рівні грудей, внутрішній запис увімкнено</label></li>
+  <li><label><input type="checkbox" data-k="c3"> Бар вимикає музику, по можливості кондиціонер і холодильники</label></li>
+  <li><label><input type="checkbox" data-k="c4"> 10 с запису тиші в залі</label></li>
+  <li><label><input type="checkbox" data-k="c5"> Кадр і фокус на кожній камері, баланс білого однаковий</label></li>
+  <li><label><input type="checkbox" data-k="c6"> Усі камери на запис, плеснути в долоні для синхрону</label></li>
+  <li><label><input type="checkbox" data-k="c7"> Пауза посередині: перевірити батареї й карти</label></li>
+  <li><label><input type="checkbox" data-k="c8"> Того ж вечора скопіювати файли у 2 місця</label></li>
 </ul>
+<p class="muted">Галочки зберігаються на цьому пристрої. <button id="reset" type="button">Скинути всі</button></p>
 
 <footer>
   <b>Джерела цін</b>
   <ul>
     <li>A7 IV: <a href="https://hygglo.com/uk/i/hire-sony-a7iv-camera-with-28135mm-f4-power-zoom-cine-lens--68916149">Hygglo</a> · <a href="https://rental.wexphotovideo.com/hire-sony-a7-iv-8209">Wex Rental</a></li>
-    <li>FX30: <a href="https://wedio.com/en/listings/713845-sony-fx30">Wedio</a></li>
-    <li>Canon 2000D, ліміт 29:59: <a href="https://community.usa.canon.com/t5/EOS-DSLR-Mirrorless-Cameras/Movie-times-out-EOS2000D/m-p/451791">Canon Community</a></li>
+    <li>FX30: <a href="https://hygglo.com/uk/category/9452-cameras/london">Hygglo</a> · <a href="https://wedio.com/en/listings/713845-sony-fx30">Wedio</a> · <a href="https://www.cardinalbroadcast.co.uk/camera-hire/">Cardinal Broadcast</a></li>
+    <li>Штативи: орієнтовно за оголошеннями на <a href="https://hygglo.com/uk/category/9452-cameras/london">Hygglo</a>, точну ціну дивись у самому оголошенні</li>
     <li>DJI Mic 2: <a href="https://hygglo.com/uk/i/864-dji-mic-2">Hygglo</a> · <a href="https://floatingharbour.co.uk/hires-and-spaces/equipment-hire/sound/microphones-wireless/dji-mic-2">Floating Harbour</a></li>
     <li>DJI Mic 3: <a href="https://www.argos.co.uk/product/7694536">Argos</a> · <a href="https://www.mynewsdesk.com/uk/dji/pressreleases/dji-introduces-the-most-advanced-mini-wireless-microphone-with-dji-mic-3-3401390?site=uk">DJI UK</a></li>
     <li>Світло: <a href="https://hygglo.com/uk/i/hire-amaran-200x-bicolour-led--71243226">Amaran 200x</a> · <a href="https://hygglo.com/uk/i/cea-aputure-amaran-200d-led-continuous-video-light">Amaran 200D</a> · <a href="https://hygglo.com/uk/i/hire-aputure-amaran-3-light-kit-bicolour-adjustable-led-85802252">набір з 3 ламп</a> · <a href="https://wedio.com/en/listings/713534-aputure-amaran-300c-rgb-lights-with-2x-light-dome-iii-softbox">Wedio 300c ×2</a></li>
@@ -152,5 +158,25 @@
 </footer>
 
 </main>
+<script>
+  (function () {
+    var KEY = "zakadrom-checklist";
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
+    var boxes = document.querySelectorAll('ul.check input[type="checkbox"]');
+    boxes.forEach(function (b) {
+      b.checked = !!saved[b.dataset.k];
+      b.addEventListener("change", function () {
+        saved[b.dataset.k] = b.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      });
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      saved = {};
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      boxes.forEach(function (b) { b.checked = false; });
+    });
+  })();
+</script>
 </body>
 </html>
