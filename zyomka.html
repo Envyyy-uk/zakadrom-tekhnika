@@ -72,8 +72,8 @@
 
 <h2>Світло</h2>
 <div class="card"><ul class="check">
-  <li><label><input type="checkbox"><span>2 LED-лампи з софтбоксами і стійками — основне світло на обличчя<span class="tag rent">оренда</span><span class="note">Hygglo: Amaran 200x / 200D ~£20 за штуку</span></span></label></li>
-  <li><label><input type="checkbox"><span>Твоя маленька LED-панель + тримач<span class="tag have">є</span><span class="note">Сама по собі вона слабка для 4 облич, але дуже згодиться як додаткова. Варіанти нижче на схемі</span></span></label></li>
+  <li><label><input type="checkbox"><span>2 LED-лампи з софтбоксами і стійками — основне світло на обличчя<span class="tag buy">купити</span><span class="note">Дешево: набір Neewer NK103 (2 софтбокси, лампи, стійки) від £79.99. Краще: 2× Godox SL60IIBi ~£119–135 за лампу + софтбокси. Або оренда на Hygglo ~£20 за лампу</span></span></label></li>
+  <li><label><input type="checkbox"><span>Твоя маленька LED-панель + тримач<span class="tag have">є</span><span class="note">Контурне світло позаду ведучого</span></span></label></li>
   <li><label><input type="checkbox"><span>Твоя LED-трубка (~40 см)<span class="tag have">є</span><span class="note">Контурне світло позаду гостей. Може стояти й у кадрі як світловий акцент на фоні</span></span></label></li>
   <li><label><input type="checkbox"><span>Кріплення для трубки: стійка, струбцина або скотч до полиці чи колони</span></label></li>
   <li><label><input type="checkbox"><span>USB-кабелі й павербанк (або подовжувач) для панелі й трубки</span></label></li>
@@ -81,55 +81,67 @@
 
 <div class="card">
   <b>Куди ставити світло</b>
-  <svg viewBox="0 0 640 330" role="img" aria-label="Схема: стіл, 4 людини, 2 софтбокси спереду під 45 градусів, LED-трубка позаду гостей, маленька панель позаду ведучого, 3 камери">
-    <rect x="0" y="0" width="640" height="330" fill="none"/>
-    <!-- фон бару -->
-    <rect x="20" y="14" width="600" height="26" rx="4" fill="#2a1218" stroke="#3a1b22"/>
-    <text x="320" y="32" fill="#b3a9a9" font-size="13" text-anchor="middle">фон: неон / сцена бару (лишаємо, це атмосфера)</text>
-    <!-- стіл -->
-    <rect x="220" y="120" width="200" height="80" rx="10" fill="#1a1013" stroke="#b3a9a9"/>
-    <text x="320" y="165" fill="#b3a9a9" font-size="13" text-anchor="middle">стіл</text>
-    <!-- люди -->
+  <svg viewBox="0 0 640 360" role="img" aria-label="Схема: ведучий з одного боку столу, троє гостей навпроти; усі камери з одного боку; софтбокс на гостей і софтбокс на ведучого; LED-трубка позаду гостей, панель позаду ведучого">
+    <rect x="150" y="10" width="340" height="24" rx="4" fill="#2a1218" stroke="#3a1b22"/>
+    <text x="320" y="27" fill="#b3a9a9" font-size="12" text-anchor="middle">фон за гостями: неон / сцена бару</text>
+    <rect x="290" y="44" width="60" height="8" rx="4" fill="#9be3ae"/>
+    <text x="360" y="52" fill="#9be3ae" font-size="12" text-anchor="start">твоя трубка (контур)</text>
+    <line x1="300" y1="52" x2="262" y2="104" stroke="#9be3ae" stroke-dasharray="3 3"/>
+    <line x1="320" y1="52" x2="320" y2="104" stroke="#9be3ae" stroke-dasharray="3 3"/>
+    <line x1="340" y1="52" x2="378" y2="104" stroke="#9be3ae" stroke-dasharray="3 3"/>
     <g fill="#f4f1ee" font-size="12" text-anchor="middle">
-      <circle cx="250" cy="100" r="13" fill="#f4f1ee"/><text x="250" y="80">гість</text>
-      <circle cx="320" cy="100" r="13" fill="#f4f1ee"/><text x="320" y="80">гість</text>
-      <circle cx="390" cy="100" r="13" fill="#f4f1ee"/><text x="390" y="80">гість</text>
-      <circle cx="320" cy="222" r="13" fill="#f4f1ee"/><text x="320" y="252">ведучий</text>
+      <circle cx="260" cy="118" r="13"/><circle cx="320" cy="118" r="13"/><circle cx="380" cy="118" r="13"/>
     </g>
-    <!-- софтбокси -->
-    <g fill="#e0182d">
-      <rect x="110" y="200" width="44" height="20" rx="3" transform="rotate(-35 132 210)"/>
-      <rect x="486" y="200" width="44" height="20" rx="3" transform="rotate(35 508 210)"/>
+    <text x="215" y="122" fill="#b3a9a9" font-size="12" text-anchor="end">ГОСТІ</text>
+    <rect x="215" y="140" width="210" height="70" rx="10" fill="#1a1013" stroke="#b3a9a9"/>
+    <text x="320" y="180" fill="#b3a9a9" font-size="12" text-anchor="middle">стіл</text>
+    <line x1="320" y1="132" x2="320" y2="218" stroke="#b3a9a9" stroke-dasharray="2 5" opacity=".6"/>
+    <circle cx="320" cy="232" r="13" fill="#f4f1ee"/>
+    <text x="345" y="236" fill="#b3a9a9" font-size="12" text-anchor="start">ВЕДУЧИЙ</text>
+    <rect x="308" y="282" width="24" height="14" rx="2" fill="#9be3ae"/>
+    <text x="300" y="294" fill="#9be3ae" font-size="12" text-anchor="end">твоя панель (контур)</text>
+    <line x1="320" y1="282" x2="320" y2="246" stroke="#9be3ae" stroke-dasharray="3 3"/>
+    <rect x="96" y="268" width="46" height="20" rx="3" fill="#e0182d" transform="rotate(-40 119 278)"/>
+    <text x="40" y="320" fill="#ffb3bc" font-size="12">софтбокс → гості</text>
+    <line x1="138" y1="262" x2="250" y2="128" stroke="#e0182d" stroke-dasharray="4 4"/>
+    <rect x="96" y="64" width="46" height="20" rx="3" fill="#e0182d" transform="rotate(40 119 74)"/>
+    <text x="40" y="52" fill="#ffb3bc" font-size="12">софтбокс → ведучий</text>
+    <line x1="138" y1="90" x2="308" y2="226" stroke="#e0182d" stroke-dasharray="4 4"/>
+    <g fill="#b3a9a9" font-size="12">
+      <rect x="556" y="168" width="30" height="20" rx="3"/><text x="571" y="206" text-anchor="middle">A загальний,</text><text x="571" y="220" text-anchor="middle">збоку</text>
+      <rect x="452" y="282" width="30" height="20" rx="3"/><text x="467" y="320" text-anchor="middle">B гості</text><text x="467" y="334" text-anchor="middle">(з-за плеча ведучого)</text>
+      <rect x="470" y="70" width="30" height="20" rx="3"/><text x="508" y="84" text-anchor="start">C ведучий</text>
     </g>
-    <text x="120" y="250" fill="#ffb3bc" font-size="12" text-anchor="middle">софтбокс 1</text>
-    <text x="520" y="250" fill="#ffb3bc" font-size="12" text-anchor="middle">софтбокс 2</text>
-    <line x1="150" y1="200" x2="235" y2="112" stroke="#e0182d" stroke-dasharray="4 4"/>
-    <line x1="490" y1="200" x2="405" y2="112" stroke="#e0182d" stroke-dasharray="4 4"/>
-    <!-- LED-трубка позаду гостей -->
-    <rect x="296" y="50" width="48" height="8" rx="4" fill="#9be3ae"/>
-    <text x="410" y="58" fill="#9be3ae" font-size="12" text-anchor="middle">твоя трубка</text>
-    <line x1="320" y1="58" x2="320" y2="86" stroke="#9be3ae" stroke-dasharray="3 3"/>
-    <line x1="306" y1="58" x2="258" y2="88" stroke="#9be3ae" stroke-dasharray="3 3"/>
-    <line x1="334" y1="58" x2="382" y2="88" stroke="#9be3ae" stroke-dasharray="3 3"/>
-    <!-- маленька панель -->
-    <rect x="360" y="262" width="24" height="14" rx="2" fill="#9be3ae"/>
-    <text x="440" y="274" fill="#9be3ae" font-size="12" text-anchor="middle">твоя панель</text>
-    <line x1="366" y1="262" x2="330" y2="232" stroke="#9be3ae" stroke-dasharray="3 3"/>
-    <!-- камери -->
-    <g fill="#b3a9a9" font-size="12" text-anchor="middle">
-      <rect x="306" y="296" width="28" height="18" rx="3"/><text x="320" y="326">A загальний</text>
-      <rect x="196" y="280" width="28" height="18" rx="3"/><text x="190" y="312">B гості</text>
-      <rect x="560" y="120" width="28" height="18" rx="3"/><text x="574" y="112">C ведучий</text>
-    </g>
+    <line x1="460" y1="284" x2="392" y2="128" stroke="#b3a9a9" stroke-dasharray="2 4" opacity=".7"/>
+    <line x1="478" y1="90" x2="332" y2="226" stroke="#b3a9a9" stroke-dasharray="2 4" opacity=".7"/>
+    <line x1="556" y1="178" x2="430" y2="175" stroke="#b3a9a9" stroke-dasharray="2 4" opacity=".7"/>
   </svg>
   <ul style="margin:8px 0 0; padding-left:18px">
-    <li><b>Софтбокси</b> стоять спереду зліва і справа під кутом ~45°, трохи вище очей. Вони світять на гостей.</li>
-    <li><b>Твоя панель</b> стоїть позаду ведучого і світить йому в потилицю й плечі (контурне світло), так він відділяється від темного фону. Яскравість 30–50%, температура та сама, що на софтбоксах.</li>
-    <li><b>Твоя трубка</b> стоїть позаду гостей, низько, і так, щоб вона не потрапляла в кадр камери B. Вона дає контур на волоссі й плечах трьох гостей. Ще варіант: постав її вертикально десь на фоні в кадрі, як світлову деталь, це виглядає стильно. Якщо вона кольорова (RGB), зроби її червоною в тон каналу.</li>
-    <li>Під час сегмента з коктейлем візьми панель у руку або постав збоку: вона гарно підсвічує бокал і руки крупним планом.</li>
-    <li>Якщо одна лампа в оренді не приїде, постав панель спереду на ведучого як основне світло, а обидва софтбокси розверни на гостей.</li>
+    <li><b>Ведучий з одного боку столу, троє гостей навпроти.</b> Між вами проходить уявна лінія (пунктир). <b>Усі камери ставимо з одного боку від неї</b>, на схемі справа. Тоді в монтажі ведучий завжди дивиться в один бік, а гості в інший, і глядач не плутається.</li>
+    <li><b>A</b> стоїть збоку біля торця столу: у кадрі всі 4 у профіль. <b>B</b> стоїть за плечем ведучого і знімає гостей. <b>C</b> стоїть за гостями і знімає ведучого.</li>
+    <li><b>Софтбокси</b> стоять з протилежного від камер боку під кутом ~45°, трохи вище очей. Один світить на гостей, другий на ведучого.</li>
+    <li><b>Трубка</b> лежить позаду гостей, низько, і не потрапляє в кадр B. Вона дає контур на волоссі й плечах. Якщо трубка кольорова, можна поставити її вертикально в кадрі червоною як деталь.</li>
+    <li><b>Панель</b> стоїть позаду ведучого для контуру. Під час сегмента з коктейлем нею зручно підсвітити бокал.</li>
   </ul>
-  <p class="muted" style="margin-bottom:0">Разом виходить класична схема: 2 софтбокси дають основне світло, трубка і панель дають контур ззаду. Зі своїм світлом орендувати треба лише 2 лампи.</p>
+</div>
+
+<h2>Караоке бару (для живого номера)</h2>
+<div class="card">
+  <p style="margin-top:0"><b>Розмову пишемо на петлички, пісню на мікрофони бару.</b> Чому караоке-мікрофони не підходять для розмови:</p>
+  <ul style="margin:0 0 10px; padding-left:18px">
+    <li>Тримати мікрофон у руці 50 хв незручно. Коли людина жестикулює, звук то зникає, то стає гучним.</li>
+    <li>Караоке-мікшер зазвичай додає луну (echo). На розмові вона звучить погано, і в монтажі її вже не прибереш.</li>
+    <li>Усі мікрофони сходяться в один канал, тож потім не вирівняєш гучність кожного окремо.</li>
+    <li>Якщо звук іде ще й у колонки залу, в записі буде відлуння.</li>
+  </ul>
+  <p><b>Для пісні мікрофони бару якраз ідеальні.</b> Співаєш у мікрофон бару, а запис береш кабелем просто з мікшера: з виходу REC / AUX / LINE OUT у камеру C (FX30, мікрофонний вхід) або в телефон через адаптер. Рівень входу на камері постав низько, бо лінійний вихід гучніший за мікрофон. Петличку на співакові лиши як запас. Луну на пісню можна лишити, але трохи менше, ніж зазвичай.</p>
+  <p style="margin-bottom:10px">Для кадру мікрофони бару можна поставити на стійках перед кожним, так виглядає «по-подкастівськи». Але звук розмови все одно пишемо з петличок.</p>
+  <ul class="check">
+    <li><label><input type="checkbox"><span>Спитати в бару: модель мікшера, чи є вихід REC / AUX / LINE OUT, які роз'єми (RCA, jack 6,3 мм, XLR)</span></label></li>
+    <li><label><input type="checkbox"><span>Кабель від виходу мікшера до входу камери C (3,5 мм)<span class="tag buy">купити</span></span></label></li>
+    <li><label><input type="checkbox"><span>На розмову колонки й мікрофони бару вимкнені</span></label></li>
+    <li><label><input type="checkbox"><span>Перед піснею: тестові 10 с запису з мікшера, звук не хрипить</span></label></li>
+  </ul>
 </div>
 
 <h2>Пам'ять і бекап</h2>
@@ -152,6 +164,7 @@
 <h2>На місці, до запису</h2>
 <div class="card"><ul class="check">
   <li><label><input type="checkbox"><span>Бар вимкнув музику, по можливості кондиціонер і холодильники</span></label></li>
+  <li><label><input type="checkbox"><span>Ведучий з одного боку столу, гості навпроти, усі камери з одного боку (як на схемі)</span></label></li>
   <li><label><input type="checkbox"><span>Камери: 25 к/с, витримка 1/50, баланс білого вручну, однаковий на всіх</span></label></li>
   <li><label><input type="checkbox"><span>Світло виставлене, панель позаду ведучого увімкнена</span></label></li>
   <li><label><input type="checkbox"><span>Петлички на рівні грудей, тест звуку кожного: «що їв на сніданок?»</span></label></li>
