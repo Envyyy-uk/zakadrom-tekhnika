@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>За кадром — все для зйомки</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg:#0e0b0d; --card:#1a1013; --line:#3a1b22; --text:#f4f1ee; --muted:#b3a9a9; --red:#e0182d; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:radial-gradient(ellipse at 50% 0%, #2c0a12 0%, var(--bg) 60%) fixed; color:var(--text);
+         font:16px/1.55 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:22px 18px 60px; }
+  nav a { color:var(--muted); font-size:14px; text-decoration:none; }
+  header { border-left:4px solid var(--red); padding-left:14px; margin:14px 0 22px; }
+  h1 { font-size:32px; line-height:1.1; margin:4px 0; font-weight:900; }
+  h2 { font-size:19px; margin:30px 0 8px; }
+  h2::after { content:""; display:block; width:48px; height:3px; background:var(--red); margin-top:6px; }
+  .muted { color:var(--muted); font-size:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:10px 0; }
+  .tag { display:inline-block; font-size:12px; font-weight:700; padding:1px 8px; border-radius:20px; margin-left:6px; white-space:nowrap; }
+  .have { background:#16351f; color:#9be3ae; } .rent { background:#3a1b22; color:#ffb3bc; } .buy { background:#3a3016; color:#f2d68a; }
+  ul.check { list-style:none; padding:0; margin:0; }
+  ul.check label { display:flex; gap:12px; align-items:flex-start; cursor:pointer; padding:7px 4px; border-radius:6px; }
+  ul.check label:hover { background:#1f1216; }
+  ul.check input { width:22px; height:22px; margin:1px 0 0; accent-color:var(--red); flex:none; cursor:pointer; }
+  ul.check label:has(input:checked) { color:var(--muted); text-decoration:line-through; }
+  .note { font-size:14px; color:var(--muted); display:block; text-decoration:none; }
+  .bar { position:sticky; top:0; z-index:2; background:#140a0dee; border-bottom:1px solid var(--line); padding:8px 0; margin:0 -18px; padding-left:18px; padding-right:18px; display:flex; justify-content:space-between; align-items:center; font-size:14px; }
+  .progress { flex:1; height:6px; background:var(--line); border-radius:6px; margin:0 12px; overflow:hidden; }
+  .progress i { display:block; height:100%; width:0; background:var(--red); transition:width .2s; }
+  button { background:none; border:1px solid var(--line); color:var(--muted); border-radius:6px; padding:4px 10px; font:inherit; font-size:13px; cursor:pointer; }
+  svg { width:100%; height:auto; display:block; }
+  a { color:#ff8a97; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="./">← План техніки і кошторис</a></nav>
+
+<header>
+  <div class="muted">REC · @zakadrom.london</div>
+  <h1>Все для зйомки</h1>
+  <div class="muted">Що взяти на день запису. Тицяй галочки, поки збираєш: вони зберігаються на цьому телефоні.
+  <span class="tag have">є</span> твоє <span class="tag rent">оренда</span> на день <span class="tag buy">купити</span> один раз</div>
+</header>
+
+<div class="bar">
+  <span id="count">0 / 0</span>
+  <div class="progress"><i id="prog"></i></div>
+  <button id="reset" type="button">Скинути</button>
+</div>
+
+<h2>Камери</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>Sony A7 IV + кітовий об'єктив — камера A, загальний план<span class="tag have">є</span></span></label></li>
+  <li><label><input type="checkbox"><span>Друга Sony A7 IV з об'єктивом — камера B, гості<span class="tag rent">оренда</span></span></label></li>
+  <li><label><input type="checkbox"><span>Sony FX30 з об'єктивом — камера C, ведучий<span class="tag rent">оренда</span></span></label></li>
+  <li><label><input type="checkbox"><span>3 штативи під камери<span class="tag rent">оренда</span></span></label></li>
+  <li><label><input type="checkbox"><span>По 2–3 батареї на кожну камеру + зарядки<span class="note">Перевір, що в оренді батареї йдуть у комплекті</span></span></label></li>
+  <li><label><input type="checkbox"><span>Телефон + тримач для вертикальних кліпів (за бажанням)<span class="tag have">є</span></span></label></li>
+</ul></div>
+
+<h2>Звук</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>DJI Mic: 2 передавачі + приймач → ведучий і 1 гість<span class="tag have">є</span></span></label></li>
+  <li><label><input type="checkbox"><span>DJI Mic 2: 2 передавачі + приймач → ще 2 гостей<span class="tag rent">оренда</span></span></label></li>
+  <li><label><input type="checkbox"><span>Кейси заряджені, на передавачах увімкнений внутрішній запис</span></label></li>
+  <li><label><input type="checkbox"><span>Кабелі від приймачів до камер A і B</span></label></li>
+  <li><label><input type="checkbox"><span>Дротові навушники для контролю звуку<span class="tag buy">купити</span></span></label></li>
+</ul></div>
+
+<h2>Світло</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>2 LED-лампи з софтбоксами і стійками — основне світло на обличчя<span class="tag rent">оренда</span><span class="note">Hygglo: Amaran 200x / 200D ~£20 за штуку</span></span></label></li>
+  <li><label><input type="checkbox"><span>Твоя маленька LED-панель + тримач<span class="tag have">є</span><span class="note">Сама по собі вона слабка для 4 облич, але дуже згодиться як додаткова. Варіанти нижче на схемі</span></span></label></li>
+  <li><label><input type="checkbox"><span>USB-кабель і павербанк для панелі</span></label></li>
+</ul></div>
+
+<div class="card">
+  <b>Куди ставити світло</b>
+  <svg viewBox="0 0 640 330" role="img" aria-label="Схема: стіл, 4 людини, 2 софтбокси спереду під 45 градусів, маленька панель позаду ведучого, 3 камери">
+    <rect x="0" y="0" width="640" height="330" fill="none"/>
+    <!-- фон бару -->
+    <rect x="20" y="14" width="600" height="26" rx="4" fill="#2a1218" stroke="#3a1b22"/>
+    <text x="320" y="32" fill="#b3a9a9" font-size="13" text-anchor="middle">фон: неон / сцена бару (лишаємо, це атмосфера)</text>
+    <!-- стіл -->
+    <rect x="220" y="120" width="200" height="80" rx="10" fill="#1a1013" stroke="#b3a9a9"/>
+    <text x="320" y="165" fill="#b3a9a9" font-size="13" text-anchor="middle">стіл</text>
+    <!-- люди -->
+    <g fill="#f4f1ee" font-size="12" text-anchor="middle">
+      <circle cx="250" cy="100" r="13" fill="#f4f1ee"/><text x="250" y="80">гість</text>
+      <circle cx="320" cy="100" r="13" fill="#f4f1ee"/><text x="320" y="80">гість</text>
+      <circle cx="390" cy="100" r="13" fill="#f4f1ee"/><text x="390" y="80">гість</text>
+      <circle cx="320" cy="222" r="13" fill="#f4f1ee"/><text x="320" y="252">ведучий</text>
+    </g>
+    <!-- софтбокси -->
+    <g fill="#e0182d">
+      <rect x="110" y="200" width="44" height="20" rx="3" transform="rotate(-35 132 210)"/>
+      <rect x="486" y="200" width="44" height="20" rx="3" transform="rotate(35 508 210)"/>
+    </g>
+    <text x="120" y="250" fill="#ffb3bc" font-size="12" text-anchor="middle">софтбокс 1</text>
+    <text x="520" y="250" fill="#ffb3bc" font-size="12" text-anchor="middle">софтбокс 2</text>
+    <line x1="150" y1="200" x2="235" y2="112" stroke="#e0182d" stroke-dasharray="4 4"/>
+    <line x1="490" y1="200" x2="405" y2="112" stroke="#e0182d" stroke-dasharray="4 4"/>
+    <!-- маленька панель -->
+    <rect x="360" y="262" width="24" height="14" rx="2" fill="#9be3ae"/>
+    <text x="440" y="274" fill="#9be3ae" font-size="12" text-anchor="middle">твоя панель</text>
+    <line x1="366" y1="262" x2="330" y2="232" stroke="#9be3ae" stroke-dasharray="3 3"/>
+    <!-- камери -->
+    <g fill="#b3a9a9" font-size="12" text-anchor="middle">
+      <rect x="306" y="296" width="28" height="18" rx="3"/><text x="320" y="326">A загальний</text>
+      <rect x="196" y="280" width="28" height="18" rx="3"/><text x="190" y="312">B гості</text>
+      <rect x="560" y="120" width="28" height="18" rx="3"/><text x="574" y="112">C ведучий</text>
+    </g>
+  </svg>
+  <ul style="margin:8px 0 0; padding-left:18px">
+    <li><b>Софтбокси</b> стоять спереду зліва і справа під кутом ~45°, трохи вище очей. Вони світять на гостей.</li>
+    <li><b>Твоя панель</b> стоїть позаду ведучого і світить йому в потилицю й плечі (контурне світло), так він відділяється від темного фону. Яскравість 30–50%, температура та сама, що на софтбоксах.</li>
+    <li>Під час сегмента з коктейлем візьми панель у руку або постав збоку: вона гарно підсвічує бокал і руки крупним планом.</li>
+    <li>Якщо одна лампа в оренді не приїде, постав панель спереду на ведучого як основне світло, а обидва софтбокси розверни на гостей.</li>
+  </ul>
+  <p class="muted" style="margin-bottom:0">Якщо в тебе дві такі панелі, друга йде за гостей і так само працює як контур. Напиши, і я оновлю схему.</p>
+</div>
+
+<h2>Пам'ять і бекап</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>Карти SD 128 ГБ, порожні: по одній на камеру + 1 запасна<span class="tag buy">купити</span></span></label></li>
+  <li><label><input type="checkbox"><span>Диск для бекапу (SSD або HDD) + ноутбук<span class="tag buy">купити</span></span></label></li>
+  <li><label><input type="checkbox"><span>Пам'ять на передавачах DJI Mic очищена</span></label></li>
+</ul></div>
+
+<h2>Живлення і дрібниці</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>2 подовжувачі на 4+ розетки<span class="tag buy">купити</span></span></label></li>
+  <li><label><input type="checkbox"><span>Павербанк<span class="tag buy">купити</span></span></label></li>
+  <li><label><input type="checkbox"><span>Gaffer-скотч, липучки для кабелів<span class="tag buy">купити</span></span></label></li>
+  <li><label><input type="checkbox"><span>Хлопавка (або просто плеснути в долоні)</span></label></li>
+  <li><label><input type="checkbox"><span>Сценарій: роздрукований або на планшеті</span></label></li>
+  <li><label><input type="checkbox"><span>Вода, серветки, пудра від блиску</span></label></li>
+</ul></div>
+
+<h2>На місці, до запису</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>Бар вимкнув музику, по можливості кондиціонер і холодильники</span></label></li>
+  <li><label><input type="checkbox"><span>Камери: 25 к/с, витримка 1/50, баланс білого вручну, однаковий на всіх</span></label></li>
+  <li><label><input type="checkbox"><span>Світло виставлене, панель позаду ведучого увімкнена</span></label></li>
+  <li><label><input type="checkbox"><span>Петлички на рівні грудей, тест звуку кожного: «що їв на сніданок?»</span></label></li>
+  <li><label><input type="checkbox"><span>10 с запису тиші в залі</span></label></li>
+  <li><label><input type="checkbox"><span>Усі камери на запис, хлопок для синхрону</span></label></li>
+</ul></div>
+
+<h2>Після запису</h2>
+<div class="card"><ul class="check">
+  <li><label><input type="checkbox"><span>Того ж вечора файли скопійовано у 2 місця</span></label></li>
+  <li><label><input type="checkbox"><span>Оренду повернуто вчасно, техніку перевірено, нічого не забуто в барі</span></label></li>
+</ul></div>
+
+<p class="muted">Ціни й де орендувати — на <a href="./">головній сторінці</a>.</p>
+</main>
+
+<script>
+  (function () {
+    var KEY = "zakadrom-zyomka";
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('ul.check input[type="checkbox"]'));
+    function update() {
+      var done = boxes.filter(function (b) { return b.checked; }).length;
+      document.getElementById("count").textContent = done + " / " + boxes.length;
+      document.getElementById("prog").style.width = (100 * done / boxes.length) + "%";
+    }
+    boxes.forEach(function (b, i) {
+      b.checked = !!saved["c" + i];
+      b.addEventListener("change", function () {
+        saved["c" + i] = b.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+        update();
+      });
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      saved = {};
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      boxes.forEach(function (b) { b.checked = false; });
+      update();
+    });
+    update();
+  })();
+</script>
+</body>
+</html>
